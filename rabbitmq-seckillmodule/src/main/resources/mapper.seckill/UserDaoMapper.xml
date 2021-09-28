@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.example.rabbitmqseckillmodule.dao.UserDao">
+    <resultMap id="userMap" type="com.example.common.entity.UserTable">
+        <result property="id" column="id"/>
+        <result property="userID" column="user_id"/>
+        <result property="userMobile" column="user_mobile"/>
+        <result property="userName" column="user_name"/>
+    </resultMap>
+</mapper>

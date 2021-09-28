@@ -1,0 +1,37 @@
+server:
+  port: 8088
+spring:
+  datasource:
+    username: root
+    password: root
+    url: jdbc:mysql://localhost:3306/test?useUnicode=true&characterEncoding=utf-8&useSSL=false&serverTimezone=Asia/Shanghai
+    driver-class-name: com.mysql.cj.jdbc.Driver
+  rabbitmq:
+    host: 192.168.0.100
+    port: 5672
+    #    使用的虚拟host
+    virtual-host: my_vhost
+    #    开启生产者发送消息确认
+    publisher-confirm-type: correlated
+    #    开启回退模式
+    publisher-returns: true
+    template:
+      mandatory: true
+    listener:
+      simple:
+        acknowledge-mode: manual
+        #启动手动ACK机制，
+    username: admin
+    password: admin
+
+  redis:
+    host: 192.168.0.100
+    port: 6379
+    username: root
+    password: 123456
+mybatis-plus:
+  mapper-locations: classpath:/mapper/**/*.xml
+  global-config:
+    db-config:
+      id-type: auto
+#这里通过配置文件进行主键自增

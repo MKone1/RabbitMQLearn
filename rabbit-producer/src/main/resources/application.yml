@@ -1,0 +1,14 @@
+server:
+  port: 7069
+spring:
+  rabbitmq:
+    host: 192.168.0.100
+    port: 5672
+    username: admin
+    password: admin
+#    使用的虚拟host
+    virtual-host: my_vhost
+  #    开启生产者发送消息确认
+    publisher-confirm-type: correlated
+#    开启回退模式
+    publisher-returns: true
